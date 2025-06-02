@@ -1,0 +1,304 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.titre h1 {
+  text-transform: uppercase;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  text-shadow: 3px 3px 3px black;
+  color: white;
+}
+
+.monlogo {
+  margin-right: 1500px;
+}
+
+.monlogo h3 {
+  color: white;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 20px;
+  text-shadow: 3px 3px 3px black;
+}
+
+.monlogo span {
+  color: greenyellow;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+body {
+  font-family: "Courier New", Courier, monospace; /* Police informatique moderne */
+  background-color: #121212; /* Fond sombre pour l'aspect cybersécurité */
+  color: #e4e4e4; /* Texte clair pour le contraste */
+  line-height: 1.6;
+}
+
+/* Header styles */
+header {
+  background: #0a1b2d; /* Bleu foncé plus sombre */
+  color: #00ff00; /* Vert néon (rappel des écrans de terminal) */
+  padding: 1.5rem 0;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  border-bottom: 2px solid #00ff00; /* Bordure néon verte */
+}
+
+header h1 {
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar ul li {
+  margin: 0 25px;
+}
+
+.nav-link {
+  color: #00ff00; /* Boutons en vert néon */
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-link:hover {
+  background-color: #00ff00;
+  color: #121212; /* Change le texte en noir au survol */
+  box-shadow: 0 0 10px 2px rgba(0, 255, 0, 0.6);
+}
+
+.nav-link:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #00ff00;
+  transition: width 0.3s;
+}
+
+.nav-link:hover:before {
+  width: 100%;
+}
+
+/* Main content area */
+main {
+  padding: 5rem 2rem 2rem; /* Décalage pour ne pas être caché sous l'entête */
+  max-width: 1000px;
+  margin: auto;
+  background: #1c1c1c; /* Fond sombre légèrement plus clair */
+  border-radius: 8px;
+  animation: fadeIn 1s ease-in;
+  box-shadow: 0 4px 15px rgba(0, 255, 0, 0.4); /* Ombre verte néon */
+}
+
+/* Titles and sections */
+h2 {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  text-align: center;
+  letter-spacing: 2px;
+  color: #00ff00;
+}
+
+section {
+  margin-bottom: 2.5rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #0a1b2d; /* Fond bleu foncé */
+  color: #00ff00; /* Texte en vert néon */
+  margin-top: 2rem;
+  border-top: 2px solid #00ff00;
+  font-size: 0.9rem;
+}
+
+/* Button styles */
+.btn {
+  display: inline-block;
+  background-color: #00ff00; /* Bouton en vert néon */
+  color: #121212; /* Texte noir */
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  text-align: center;
+  border-radius: 8px;
+  text-decoration: none;
+  margin-top: 1.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 255, 0, 0.6);
+}
+
+.btn:hover {
+  background-color: #121212; /* Fond noir au survol */
+  color: #00ff00; /* Texte vert néon */
+  transform: translateY(-3px); /* Effet de soulèvement */
+  box-shadow: 0 6px 15px rgba(0, 255, 0, 0.8); /* Ombre plus marquée */
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 2s ease-in-out;
+}
+
+.slide-in {
+  animation: slideIn 1s ease-out;
+}
+
+.list-anim li {
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+.list-anim li:nth-child(2) {
+  animation-delay: 1s;
+}
+
+.list-anim li:nth-child(3) {
+  animation-delay: 1.5s;
+}
+
+.list-anim li:nth-child(4) {
+  animation-delay: 2s;
+}
+
+.list-anim li:nth-child(5) {
+  animation-delay: 2.5s;
+}
+
+/* Style pour les liens externes ou téléchargements */
+a {
+  color: #00ff00; /* Liens en vert néon */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #121212;
+  background-color: #00ff00;
+  padding: 5px;
+}
+
+/* Utilisation d'icônes pour améliorer l'expérience visuelle (ajouter une bibliothèque comme FontAwesome ou utiliser des SVG) */
+.icon {
+  font-size: 20px;
+  margin-right: 8px;
+}
+/* Style pour le footer : garantir qu'il reste en bas */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #0a1b2d;
+  color: #00ff00;
+  margin-top: 2rem;
+  border-top: 2px solid #00ff00;
+  font-size: 0.9rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+/* Appliquer un minimum de hauteur à l'ensemble du body */
+html,
+body {
+  height: 100%;
+}
+
+/* Main content area : s'assure que le contenu prend toute la hauteur disponible */
+main {
+  padding: 5rem 2rem 2rem; /* Décalage pour ne pas être caché sous l'entête */
+  max-width: 1000px;
+  margin: auto;
+  background: #1c1c1c; /* Fond sombre légèrement plus clair */
+  border-radius: 8px;
+  animation: fadeIn 1s ease-in;
+  box-shadow: 0 4px 15px rgba(0, 255, 0, 0.4); /* Ombre verte néon */
+  flex: 1; /* Permet à l'élément main de prendre tout l'espace disponible */
+}
+
+/* Utiliser un flexbox pour tout le corps du document */
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "Courier New", Courier, monospace;
+  background-color: #121212;
+  color: #e4e4e4;
+  line-height: 1.6;
+}
+/* Button styles */
+.btn {
+  display: inline-block;
+  background-color: #00ff00; /* Bouton en vert néon */
+  color: #121212; /* Texte noir */
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  text-align: center;
+  border-radius: 8px;
+  text-decoration: none;
+  margin-top: 1.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 255, 0, 0.4); /* Ombre plus subtile */
+  border: 2px solid #00ff00; /* Bordure verte pour plus de contraste */
+}
+
+/* Bouton au survol */
+.btn:hover {
+  background-color: #121212; /* Fond noir au survol */
+  color: #00ff00; /* Texte vert néon */
+  transform: translateY(-3px); /* Effet de soulèvement */
+  box-shadow: 0 6px 15px rgba(0, 255, 0, 0.8); /* Ombre plus marquée et plus grande */
+  border: 2px solid #00ff00; /* Bordure verte toujours présente */
+}
+
+/* Effet de focus pour une interaction de mise en valeur */
+.btn:focus {
+  outline: none;
+  box-shadow: 0 0 10px 3px rgba(0, 255, 0, 0.8); /* Ombre verte claire autour */
+  background-color: #333333; /* Changement de fond en gris foncé */
+  color: #00ff00;
+}
+
+/* Effet au survol avec un léger dégradé de couleur pour plus de nuance */
+.btn:hover {
+  background: linear-gradient(
+    45deg,
+    #00ff00,
+    #003300
+  ); /* Dégradé de vert néon à vert foncé */
+  color: #121212;
+  box-shadow: 0 6px 25px rgba(0, 255, 0, 0.8); /* Ombre plus grande pour l'effet de profondeur */
+}
