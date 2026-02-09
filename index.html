@@ -1,74 +1,55 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Portfolio de Mohamed Sadouni</title>
-    <link rel="stylesheet" href="./style.css" />
-  </head>
-  <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portfolio de Mohamed Sadouni - Accueil</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
     <header>
-      <div class="titre">
-        <h1>Portfolio</h1>
-      </div>
-
-      <div class="navbar">
-        <div class="monlogo">
-          <h3>Mohamed<span>Sadouni </span></h3>
+        <div class="navbar">
+            <h1>M. SADOUNI // DEV</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="nav-link active">ACCUEIL</a></li>
+                    <li><a href="competences.html" class="nav-link">COMPÉTENCES</a></li>
+                    <li><a href="projets.html" class="nav-link">PROJETS</a></li>
+                </ul>
+            </nav>
         </div>
-
-        <nav>
-          <ul>
-            <li><a href="index.html" class="nav-link">Accueil</a></li>
-            <li><a href="Competences.html" class="nav-link">Compétences</a></li>
-            <li><a href="projets.html" class="nav-link">Projets</a></li>
-          </ul>
-        </nav>
-      </div>
     </header>
 
     <main>
-      <section id="cv">
-        <h2 class="slide-in">Mon CV</h2>
-        <p>Cliquer sur le bouton ci-dessous pour voir mon CV :</p>
-        <a
-          href="CV_Mohamed_SADOUNI_IUT Orsay_20250530.pdf"
-          class="btn"
-          download="CV_Mohamed_SADOUNI_IUT Orsay_20250530.pdf"
-          >Voir mon CV</a
-        >
-      </section>
+        <section id="accueil">
+            <h2 class="cyber-title">INITIALISATION DU SYSTÈME...</h2>
+            <p id="typing-text" data-text="Bienvenue dans mon interface numérique. Ce portfolio a été conçu pour présenter mon parcours, mes compétences techniques et mes réalisations. Explorez les différents modules pour découvrir mon univers de développement. Mon objectif : concevoir des solutions performantes et innovantes. N'hésitez pas à naviguer via le terminal ci-dessus.">
+                </p>
+        </section>
 
-      <section id="accueil">
-        <h2 class="slide-in">Bienvenue sur mon site !</h2>
-        <p class="fade-in">
-          Ce site a été conçu pour vous présenter mon parcours professionnel,
-          mes compétences et mes projets. Vous y trouverez toutes les
-          informations nécessaires pour découvrir mon univers et les différents
-          domaines dans lesquels j'évolue. Mon objectif est de mettre en avant
-          mes expériences et mes réalisations afin de partager avec vous ma
-          passion et mes aspirations. N'hésitez pas à explorer les différentes
-          sections pour en savoir plus !
-        </p>
-      </section>
+        <section id="cv-section">
+            <h2 class="cyber-title">DONNÉES PERSONNELLES</h2>
+            <p>Accéder au fichier source de mon Curriculum Vitae.</p>
+            <div class="btn-container">
+                <a href="CV_Mohamed_SADOUNI_IUT Orsay_20250530.pdf" class="btn" download>TÉLÉCHARGER LE CV ></a>
+            </div>
+        </section>
 
-      <section id="lettre">
-        <h2 class="slide-in">Ma Lettre de Motivation</h2>
-        <p>
-          Cliquer sur le bouton ci-dessous pour voir ma lettre de motivation :
-        </p>
-        <a
-          href="Lettre_de_Motivation.pdf"
-          class="btn"
-          download="Lettre_de_Motivation.pdf"
-          >Télécharger ma Lettre de Motivation</a
-        >
-      </section>
+        <section id="lettre-section">
+            <h2 class="cyber-title">MOTIVATION PROTOCOL</h2>
+            <p>Consulter ma lettre de motivation pour une collaboration potentielle.</p>
+             <div class="btn-container">
+                <a href="Lettre_De_Motivation.pdf" class="btn" download>TÉLÉCHARGER LA LETTRE ></a>
+            </div>
+        </section>
     </main>
 
     <footer>
-      <p>&copy; 2025 Mohamed Sadouni. Tous droits réservés.</p>
+        <p>&copy; 2026 M. SADOUNI. SYSTÈME SÉCURISÉ. TOUS DROITS RÉSERVÉS.</p>
     </footer>
-  </body>
+
+    <script src="script.js"></script>
+</body>
 </html>

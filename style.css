@@ -1,304 +1,373 @@
-/* Reset default styles */
+/* --- VARIABLES & RESET --- */
+:root {
+    --bg-color: #050a0f;
+    --glass-bg: rgba(10, 25, 47, 0.7);
+    --neon-primary: #00ffea; /* Cyan électrique */
+    --neon-secondary: #ff00c8; /* Magenta néon */
+    --text-color: #e6f1ff;
+    --font-tech: 'Courier New', monospace; /* Gardons ton choix, mais stylisé */
+    --font-heading: 'Segoe UI', Roboto, Helvetica, sans-serif; /* Plus moderne pour les titres */
+}
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-.titre h1 {
-  text-transform: uppercase;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  text-shadow: 3px 3px 3px black;
-  color: white;
-}
-
-.monlogo {
-  margin-right: 1500px;
-}
-
-.monlogo h3 {
-  color: white;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  font-size: 20px;
-  text-shadow: 3px 3px 3px black;
-}
-
-.monlogo span {
-  color: greenyellow;
-  font-size: 40px;
-  text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
-  font-family: "Courier New", Courier, monospace; /* Police informatique moderne */
-  background-color: #121212; /* Fond sombre pour l'aspect cybersécurité */
-  color: #e4e4e4; /* Texte clair pour le contraste */
-  line-height: 1.6;
+    font-family: var(--font-tech);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-/* Header styles */
+/* Canvas background doit être derrière tout */
+#bg-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.6;
+}
+
+/* --- TYPOGRAPHIE GLITCHÉE & TITRES --- */
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 800;
+}
+
+h1 {
+    background: linear-gradient(90deg, var(--neon-primary), var(--text-color), var(--neon-secondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 20px rgba(0, 255, 234, 0.5);
+    animation: glow-pulse 3s infinite alternate;
+}
+
+h2.cyber-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    position: relative;
+    display: inline-block;
+    color: var(--neon-primary);
+    text-shadow: 0 0 10px var(--neon-primary);
+}
+
+/* Petite ligne sous les titres */
+h2.cyber-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--neon-secondary), var(--neon-primary));
+    box-shadow: 0 0 15px var(--neon-primary);
+}
+
+@keyframes glow-pulse {
+    0% { text-shadow: 0 0 10px rgba(0, 255, 234, 0.3); }
+    100% { text-shadow: 0 0 30px rgba(0, 255, 234, 0.8), 0 0 10px rgba(255, 0, 200, 0.5); }
+}
+
+/* --- HEADER & NAVBAR GLASSMORPHISM --- */
 header {
-  background: #0a1b2d; /* Bleu foncé plus sombre */
-  color: #00ff00; /* Vert néon (rappel des écrans de terminal) */
-  padding: 1.5rem 0;
-  text-align: center;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  border-bottom: 2px solid #00ff00; /* Bordure néon verte */
+    background: rgba(5, 10, 15, 0.8);
+    backdrop-filter: blur(15px); /* Effet verre flouté */
+    border-bottom: 1px solid rgba(0, 255, 234, 0.2);
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 5px 20px rgba(0, 255, 234, 0.1);
 }
 
-header h1 {
-  font-size: 2.5rem;
-  letter-spacing: 2px;
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 2rem;
 }
 
 .navbar ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-}
-
-.navbar ul li {
-  margin: 0 25px;
+    list-style: none;
+    display: flex;
 }
 
 .nav-link {
-  color: #00ff00; /* Boutons en vert néon */
-  text-decoration: none;
-  font-size: 1.2rem;
-  padding: 10px 20px;
-  border-radius: 5px;
-  transition: all 0.3s ease;
-  position: relative;
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 10px 25px;
+    margin: 0 5px;
+    position: relative;
+    transition: all 0.4s ease;
+    font-family: var(--font-heading);
+    font-weight: bold;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+/* Effet hover nav incroyable */
+.nav-link::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: -1;
+    background: var(--neon-primary);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease-in-out;
+    opacity: 0.2;
+}
+
+.nav-link:hover::before {
+    transform: scaleX(1);
 }
 
 .nav-link:hover {
-  background-color: #00ff00;
-  color: #121212; /* Change le texte en noir au survol */
-  box-shadow: 0 0 10px 2px rgba(0, 255, 0, 0.6);
+    color: var(--neon-primary);
+    border: 1px solid var(--neon-primary);
+    box-shadow: 0 0 15px var(--neon-primary), inset 0 0 10px var(--neon-primary);
+    text-shadow: 0 0 5px var(--text-color);
 }
 
-.nav-link:before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: #00ff00;
-  transition: width 0.3s;
-}
 
-.nav-link:hover:before {
-  width: 100%;
-}
-
-/* Main content area */
+/* --- MAIN LAYOUT --- */
 main {
-  padding: 5rem 2rem 2rem; /* Décalage pour ne pas être caché sous l'entête */
-  max-width: 1000px;
-  margin: auto;
-  background: #1c1c1c; /* Fond sombre légèrement plus clair */
-  border-radius: 8px;
-  animation: fadeIn 1s ease-in;
-  box-shadow: 0 4px 15px rgba(0, 255, 0, 0.4); /* Ombre verte néon */
-}
-
-/* Titles and sections */
-h2 {
-  margin-bottom: 1.5rem;
-  font-size: 2rem;
-  text-align: center;
-  letter-spacing: 2px;
-  color: #00ff00;
+    margin-top: 100px;
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    flex: 1;
+    z-index: 1;
 }
 
 section {
-  margin-bottom: 2.5rem;
+    margin-bottom: 6rem;
+    /* Pour l'animation au scroll JS */
+    opacity: 0; 
+    transform: translateY(50px);
+    transition: all 0.8s ease-out;
 }
 
-footer {
-  text-align: center;
-  padding: 1rem;
-  background: #0a1b2d; /* Fond bleu foncé */
-  color: #00ff00; /* Texte en vert néon */
-  margin-top: 2rem;
-  border-top: 2px solid #00ff00;
-  font-size: 0.9rem;
-}
-
-/* Button styles */
-.btn {
-  display: inline-block;
-  background-color: #00ff00; /* Bouton en vert néon */
-  color: #121212; /* Texte noir */
-  padding: 12px 24px;
-  font-size: 1.1rem;
-  text-align: center;
-  border-radius: 8px;
-  text-decoration: none;
-  margin-top: 1.5rem;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0, 255, 0, 0.6);
-}
-
-.btn:hover {
-  background-color: #121212; /* Fond noir au survol */
-  color: #00ff00; /* Texte vert néon */
-  transform: translateY(-3px); /* Effet de soulèvement */
-  box-shadow: 0 6px 15px rgba(0, 255, 0, 0.8); /* Ombre plus marquée */
-}
-
-/* Animations */
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
+section.visible {
     opacity: 1;
-  }
+    transform: translateY(0);
 }
 
-@keyframes slideIn {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
+p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    max-width: 800px;
 }
 
-.fade-in {
-  animation: fadeIn 2s ease-in-out;
+/* --- BOUTONS CYBER --- */
+.btn-container {
+    margin-top: 2rem;
 }
 
-.slide-in {
-  animation: slideIn 1s ease-out;
-}
-
-.list-anim li {
-  opacity: 0;
-  animation: fadeIn 1s ease-out forwards;
-  animation-delay: 0.5s;
-}
-
-.list-anim li:nth-child(2) {
-  animation-delay: 1s;
-}
-
-.list-anim li:nth-child(3) {
-  animation-delay: 1.5s;
-}
-
-.list-anim li:nth-child(4) {
-  animation-delay: 2s;
-}
-
-.list-anim li:nth-child(5) {
-  animation-delay: 2.5s;
-}
-
-/* Style pour les liens externes ou téléchargements */
-a {
-  color: #00ff00; /* Liens en vert néon */
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-  color: #121212;
-  background-color: #00ff00;
-  padding: 5px;
-}
-
-/* Utilisation d'icônes pour améliorer l'expérience visuelle (ajouter une bibliothèque comme FontAwesome ou utiliser des SVG) */
-.icon {
-  font-size: 20px;
-  margin-right: 8px;
-}
-/* Style pour le footer : garantir qu'il reste en bas */
-footer {
-  text-align: center;
-  padding: 1rem;
-  background: #0a1b2d;
-  color: #00ff00;
-  margin-top: 2rem;
-  border-top: 2px solid #00ff00;
-  font-size: 0.9rem;
-  position: relative;
-  bottom: 0;
-  width: 100%;
-}
-/* Appliquer un minimum de hauteur à l'ensemble du body */
-html,
-body {
-  height: 100%;
-}
-
-/* Main content area : s'assure que le contenu prend toute la hauteur disponible */
-main {
-  padding: 5rem 2rem 2rem; /* Décalage pour ne pas être caché sous l'entête */
-  max-width: 1000px;
-  margin: auto;
-  background: #1c1c1c; /* Fond sombre légèrement plus clair */
-  border-radius: 8px;
-  animation: fadeIn 1s ease-in;
-  box-shadow: 0 4px 15px rgba(0, 255, 0, 0.4); /* Ombre verte néon */
-  flex: 1; /* Permet à l'élément main de prendre tout l'espace disponible */
-}
-
-/* Utiliser un flexbox pour tout le corps du document */
-body {
-  display: flex;
-  flex-direction: column;
-  font-family: "Courier New", Courier, monospace;
-  background-color: #121212;
-  color: #e4e4e4;
-  line-height: 1.6;
-}
-/* Button styles */
 .btn {
-  display: inline-block;
-  background-color: #00ff00; /* Bouton en vert néon */
-  color: #121212; /* Texte noir */
-  padding: 12px 24px;
-  font-size: 1.1rem;
-  text-align: center;
-  border-radius: 8px;
-  text-decoration: none;
-  margin-top: 1.5rem;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0, 255, 0, 0.4); /* Ombre plus subtile */
-  border: 2px solid #00ff00; /* Bordure verte pour plus de contraste */
+    position: relative;
+    display: inline-block;
+    padding: 15px 35px;
+    color: var(--neon-primary);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-family: var(--font-heading);
+    background: transparent;
+    border: 2px solid var(--neon-primary);
+    overflow: hidden;
+    transition: 0.5s;
+    z-index: 1;
 }
 
-/* Bouton au survol */
 .btn:hover {
-  background-color: #121212; /* Fond noir au survol */
-  color: #00ff00; /* Texte vert néon */
-  transform: translateY(-3px); /* Effet de soulèvement */
-  box-shadow: 0 6px 15px rgba(0, 255, 0, 0.8); /* Ombre plus marquée et plus grande */
-  border: 2px solid #00ff00; /* Bordure verte toujours présente */
+    color: var(--bg-color);
+    box-shadow: 0 0 20px var(--neon-primary), 0 0 50px var(--neon-primary);
 }
 
-/* Effet de focus pour une interaction de mise en valeur */
-.btn:focus {
-  outline: none;
-  box-shadow: 0 0 10px 3px rgba(0, 255, 0, 0.8); /* Ombre verte claire autour */
-  background-color: #333333; /* Changement de fond en gris foncé */
-  color: #00ff00;
+/* L'effet de remplissage au survol */
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%;
+    width: 100%; height: 100%;
+    background: var(--neon-primary);
+    z-index: -1;
+    transition: 0.5s;
 }
 
-/* Effet au survol avec un léger dégradé de couleur pour plus de nuance */
-.btn:hover {
-  background: linear-gradient(
-    45deg,
-    #00ff00,
-    #003300
-  ); /* Dégradé de vert néon à vert foncé */
-  color: #121212;
-  box-shadow: 0 6px 25px rgba(0, 255, 0, 0.8); /* Ombre plus grande pour l'effet de profondeur */
+.btn:hover::before {
+    left: 0;
+}
+
+
+/* --- PAGE COMPETENCES (Cartes Holographiques) --- */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.skill-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 255, 234, 0.1);
+    padding: 2rem;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+/* Bordure lumineuse au survol */
+.skill-card:hover {
+    border-color: var(--neon-primary);
+    box-shadow: 0 0 30px rgba(0, 255, 234, 0.3);
+    transform: translateY(-5px);
+}
+
+.skill-card h3 {
+    color: var(--neon-secondary);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+/* Icone néon avant le titre de compétence */
+.skill-card h3::before {
+    content: '►';
+    margin-right: 10px;
+    color: var(--neon-primary);
+    font-size: 1.5rem;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+
+.skill-card ul {
+    list-style: none;
+}
+
+.skill-card li {
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 25px;
+    border-left: 3px solid rgba(255, 0, 200, 0.3);
+    transition: all 0.3s;
+}
+
+.skill-card li:hover {
+    border-left-color: var(--neon-primary);
+    padding-left: 35px;
+    color: var(--neon-primary);
+    text-shadow: 0 0 5px var(--neon-primary);
+}
+
+
+/* --- PAGE PROJETS (Cartes 3D Tilt) --- */
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+    perspective: 1000px; /* Nécessaire pour l'effet 3D JS */
+}
+
+.project-item {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2.5rem;
+    /* Propriétés pour l'effet tilt JS */
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    transition: transform 0.1s ease; /* Transition très rapide pour le suivi souris */
+}
+
+
+.project-item h3 {
+    color: var(--neon-primary);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    /* L'élément ressort en 3D */
+    transform: translateZ(30px);
+}
+
+.project-item p {
+    /* L'élément ressort un peu moins */
+    transform: translateZ(20px);
+    margin-bottom: 1rem;
+}
+
+.project-item .btn {
+     /* Le bouton ressort beaucoup */
+    transform: translateZ(50px);
+    margin-top: 1rem;
+    display: inline-block;
+}
+
+
+/* --- FOOTER --- */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(5, 10, 15, 0.9);
+    color: rgba(255, 255, 255, 0.5);
+    border-top: 1px solid rgba(0, 255, 234, 0.2);
+    margin-top: auto;
+    position: relative;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 2px;
+    background: var(--neon-primary);
+    box-shadow: 0 0 20px var(--neon-primary);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    .navbar ul {
+        margin-top: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .nav-link {
+        padding: 8px 15px;
+        font-size: 1rem;
+    }
+    h1 { font-size: 2rem; }
+    h2.cyber-title { font-size: 2rem; }
+    main { margin-top: 140px; padding: 2rem 1rem; }
 }
