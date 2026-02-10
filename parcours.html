@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M.SADOUNI // TIMELINE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="scanlines"></div>
+    <div class="noise"></div>
+    <div id="cursor"></div>
+    <canvas id="bg-canvas"></canvas>
+
+    <header>
+        <div class="navbar">
+            <div class="logo">M.SADOUNI_</div>
+            <ul class="nav-links">
+                <li><a href="index.html">/ACCUEIL</a></li>
+                <li><a href="parcours.html" class="active">/PARCOURS</a></li>
+                <li><a href="competences.html">/SKILLS</a></li>
+                <li><a href="projets.html">/PROJETS</a></li>
+                <li><a href="labo.html" style="color:var(--neon-pink)">/LABO</a></li>
+                <li><a href="contact.html">/CONTACT</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <div class="glitch-wrapper">
+            <h1 class="hacker-text" data-value="CHRONOLOGIE">CHRONOLOGIE</h1>
+        </div>
+        <p>Historique des formations et expériences. Trajectoire vers l'expertise Full Stack.</p>
+        
+        <div class="timeline" style="margin-top: 3rem;">
+            
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="cyber-card" style="border-left: 5px solid var(--neon-green);">
+                    <div class="card-tag" style="background: var(--neon-green)">FUTUR</div>
+                    <h3 style="color: var(--neon-green)">AVRIL 2026 : STAGE TECHNIQUE</h3>
+                    <p style="margin-bottom: 0.5rem; font-weight: bold; color: #fff;">Durée : 11 semaines minimum</p>
+                    <p>Objectif : Intégrer une équipe de développement agile. Mettre en production des solutions robustes (Web, Logiciel ou Data).</p>
+                    <p style="font-size: 0.9rem; color: #aaa; margin-top: 10px;">> Localisation : Paris-Saclay / Île-de-France</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot" style="border-color: var(--neon-cyan); background: #000;"></div>
+                <div class="cyber-card">
+                    <div class="card-tag">2024 - PRÉSENT</div>
+                    <h3 style="color: var(--neon-cyan)">BUT INFORMATIQUE</h3>
+                    <p style="color: #fff; margin-bottom: 0.5rem;">IUT d'Orsay (Université Paris-Saclay)</p>
+                    <p>Spécialisation <strong>Parcours A</strong> : "Réalisation d'applications : conception, développement, validation".</p>
+                    <ul style="margin-top: 15px; list-style: none; line-height: 1.6; border-top: 1px solid #333; padding-top: 10px;">
+                        <li><span style="color:var(--neon-cyan)">></span> Développement Orienté Objet (Java, C#)</li>
+                        <li><span style="color:var(--neon-cyan)">></span> Architecture Web (HTML/CSS/JS/PHP)</li>
+                        <li><span style="color:var(--neon-cyan)">></span> Base de Données & SQL Avancé</li>
+                        <li><span style="color:var(--neon-cyan)">></span> Gestion de projet Agile & Versioning</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot" style="border-color: #555;"></div>
+                <div class="cyber-card" style="border-color: #555; opacity: 0.8;">
+                    <div class="card-tag" style="background: #555;">2023</div>
+                    <h3>BACCALAURÉAT GÉNÉRAL</h3>
+                    <p>Spécialités Scientifiques (Mathématiques / NSI).</p>
+                    <p>Mention Assez Bien. Premiers projets en Python et découverte de la logique algorithmique.</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
