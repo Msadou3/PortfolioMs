@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M.SADOUNI // LIFESTYLE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="scanlines"></div>
+    <div class="noise"></div>
+    <div id="cursor"></div>
+    <canvas id="bg-canvas"></canvas>
+
+    <header>
+        <div class="navbar">
+            <div class="logo">M.SADOUNI_</div>
+            <ul class="nav-links">
+                <li><a href="index.html">/ACCUEIL</a></li>
+                <li><a href="parcours.html">/PARCOURS</a></li>
+                <li><a href="competences.html">/SKILLS</a></li>
+                <li><a href="projets.html">/PROJETS</a></li>
+                <li><a href="lifestyle.html" class="active" style="color:var(--neon-yellow)">/LIFESTYLE</a></li>
+                <li><a href="labo.html" style="color:var(--neon-pink)">/LABO</a></li>
+                <li><a href="contact.html">/CONTACT</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <div class="glitch-wrapper">
+            <h1 class="hacker-text" data-value="HUMAN_DATA">HUMAN_DATA</h1>
+        </div>
+        <p>Au-delà du terminal : Discipline, Esprit d'équipe et Culture visuelle. L'équilibre nécessaire à la performance.</p>
+
+        <div class="grid-container">
+            
+            <div class="cyber-card" style="border-color: #fff;">
+                <div class="card-tag" style="background: #fff; color: #000;">FIGHTER</div>
+                <div style="height: 200px; background: url('https://images.unsplash.com/photo-1599058945522-28d584b6f0ff?q=80&w=1740') center/cover; margin-bottom: 20px; border-bottom: 2px solid #fff; filter: grayscale(100%) contrast(1.2);"></div>
+                
+                <h3 style="color: #fff"><i class="fa-solid fa-hand-fist"></i> BOXE ANGLAISE</h3>
+                <p style="margin-bottom: 1rem;">
+                    "Le code, c'est comme un ring : il faut savoir encaisser les erreurs, analyser la stratégie et frapper fort au bon moment."
+                </p>
+                <ul style="list-style: none; margin-top: 15px; border-top: 1px solid #333; padding-top: 10px;">
+                    <li style="margin-bottom: 5px;"><span style="color:#fff">></span> <strong>Résilience :</strong> Ne jamais abandonner face à un bug.</li>
+                    <li style="margin-bottom: 5px;"><span style="color:#fff">></span> <strong>Discipline :</strong> Rigueur de l'entraînement quotidien.</li>
+                    <li><span style="color:#fff">></span> <strong>Stratégie :</strong> Anticipation des mouvements.</li>
+                </ul>
+            </div>
+
+            <div class="cyber-card" style="border-color: var(--neon-yellow);">
+                <div class="card-tag" style="background: var(--neon-yellow); color: #000;">TEAM PLAYER</div>
+                <div style="height: 200px; background: url('https://images.unsplash.com/photo-1579952363873-27f3bade9f55?q=80&w=1740') center/cover; margin-bottom: 20px; border-bottom: 2px solid var(--neon-yellow); opacity: 0.9;"></div>
+                
+                <h3 style="color: var(--neon-yellow)"><i class="fa-solid fa-futbol"></i> FOOTBALL</h3>
+                <p style="margin-bottom: 1rem;">
+                    "Aucun grand projet ne se construit seul. Sur le terrain comme sur GitHub, la communication et le placement sont la clé."
+                </p>
+                <ul style="list-style: none; margin-top: 15px; border-top: 1px solid #333; padding-top: 10px;">
+                    <li style="margin-bottom: 5px;"><span style="color:var(--neon-yellow)">></span> <strong>Collectif :</strong> La victoire est celle de l'équipe.</li>
+                    <li style="margin-bottom: 5px;"><span style="color:var(--neon-yellow)">></span> <strong>Vision de jeu :</strong> Voir les problèmes avant qu'ils n'arrivent.</li>
+                    <li><span style="color:var(--neon-yellow)">></span> <strong>Leadership :</strong> Savoir motiver ses coéquipiers.</li>
+                </ul>
+            </div>
+
+            <div class="cyber-card" style="border-color: var(--neon-cyan);">
+                <div class="card-tag" style="background: var(--neon-cyan); color: #000;">CREATIVE</div>
+                <div style="height: 200px; background: url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=1740') center/cover; margin-bottom: 20px; border-bottom: 2px solid var(--neon-cyan); opacity: 0.8;"></div>
+                
+                <h3 style="color: var(--neon-cyan)"><i class="fa-solid fa-film"></i> CINÉMA & ART</h3>
+                <p style="margin-bottom: 1rem;">
+                    Passionné par le storytelling visuel et les univers complexes (Sci-Fi, Thriller). Une source d'inspiration constante pour mes interfaces.
+                </p>
+                <div style="margin-top: 20px;">
+                    <span style="display: inline-block; border: 1px solid var(--neon-cyan); padding: 5px 10px; font-size: 0.8rem; margin-right: 5px; margin-bottom: 5px;">SCI-FI</span>
+                    <span style="display: inline-block; border: 1px solid var(--neon-cyan); padding: 5px 10px; font-size: 0.8rem; margin-right: 5px; margin-bottom: 5px;">THRILLER</span>
+                    <span style="display: inline-block; border: 1px solid var(--neon-cyan); padding: 5px 10px; font-size: 0.8rem;">TECH NOIR</span>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
