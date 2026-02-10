@@ -3,51 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Portfolio de Mohamed Sadouni - Accueil</title>
-    <link rel="stylesheet" href="./style.css">
+    <title>M.SADOUNI // SYSTEM ROOT</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="scanlines"></div>
+    <div class="noise"></div>
+    <div id="cursor"></div>
+    <canvas id="bg-canvas"></canvas>
 
     <header>
         <div class="navbar">
-            <h1>M. SADOUNI // DEV</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html" class="nav-link active">ACCUEIL</a></li>
-                    <li><a href="competences.html" class="nav-link">COMPÉTENCES</a></li>
-                    <li><a href="projets.html" class="nav-link">PROJETS</a></li>
-                </ul>
-            </nav>
+            <div class="logo">M.SADOUNI_</div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">/ACCUEIL</a></li>
+                <li><a href="parcours.html">/PARCOURS</a></li>
+                <li><a href="competences.html">/SKILLS</a></li>
+                <li><a href="projets.html">/PROJETS</a></li>
+                <li><a href="labo.html" style="color:var(--neon-pink)">/LABO</a></li>
+                <li><a href="contact.html">/CONTACT</a></li>
+            </ul>
         </div>
     </header>
 
-    <main>
-        <section id="accueil">
-            <h2 class="cyber-title">INITIALISATION DU SYSTÈME...</h2>
-            <p id="typing-text" data-text="Bienvenue dans mon interface numérique. Ce portfolio a été conçu pour présenter mon parcours, mes compétences techniques et mes réalisations. Explorez les différents modules pour découvrir mon univers de développement. Mon objectif : concevoir des solutions performantes et innovantes. N'hésitez pas à naviguer via le terminal ci-dessus.">
-                </p>
-        </section>
+    <main style="display:flex; flex-direction:column; justify-content:center;">
+        
+        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 50px;">
+            <div style="flex: 1; min-width: 300px;">
+                <p style="color:var(--neon-cyan); letter-spacing:3px; margin-bottom: 0;">IDENTIFICATION CONFIRMÉE</p>
+                <h1 class="hacker-text" data-value="MOHAMED SADOUNI">MOHAMED SADOUNI</h1>
+                <h2 style="color: #888; font-size: 1.5rem; margin-bottom: 2rem;">ÉTUDIANT IUT ORSAY // <span style="color:var(--neon-green)">FULL STACK DEV</span></h2>
+                
+                <div class="cyber-card" style="padding: 20px; border-left: 5px solid var(--neon-cyan);">
+                    <p style="color: #fff; font-weight: bold; margin-bottom: 10px;">> MISSION ACTIVE : RECHERCHE DE STAGE</p>
+                    <ul style="list-style: none; line-height: 1.8; color: #aaa;">
+                        <li><span style="color:var(--neon-green)">✔</span> <strong>Durée :</strong> 11 semaines minimum</li>
+                        <li><span style="color:var(--neon-green)">✔</span> <strong>Début :</strong> 20 Avril 2026</li>
+                        <li><span style="color:var(--neon-green)">✔</span> <strong>Zone :</strong> Paris-Saclay / IDF</li>
+                    </ul>
+                </div>
 
-        <section id="cv-section">
-            <h2 class="cyber-title">DONNÉES PERSONNELLES</h2>
-            <p>Accéder au fichier source de mon Curriculum Vitae.</p>
-            <div class="btn-container">
-                <a href="CV_Mohamed_SADOUNI_IUT Orsay_20250530.pdf" class="btn" download>TÉLÉCHARGER LE CV ></a>
+                <div style="margin-top: 3rem; display: flex; gap: 20px;">
+                    <a href="CV_Mohamed_SADOUNI_IUT Orsay_20250530.pdf" download class="btn-glitch">TÉLÉCHARGER CV</a>
+                    <a href="contact.html" class="btn-glitch" style="border-color: var(--neon-green); color: var(--neon-green)">CONTACT DIRECT</a>
+                </div>
             </div>
-        </section>
 
-        <section id="lettre-section">
-            <h2 class="cyber-title">MOTIVATION PROTOCOL</h2>
-            <p>Consulter ma lettre de motivation pour une collaboration potentielle.</p>
-             <div class="btn-container">
-                <a href="Lettre_De_Motivation.pdf" class="btn" download>TÉLÉCHARGER LA LETTRE ></a>
+            <div style="flex: 0 0 300px;">
+                <div class="cyber-card" style="text-align: center;">
+                    <h3 style="color:var(--neon-cyan)">PLAYER STATS</h3>
+                    <div style="margin: 20px 0;">
+                        <div style="font-size: 3rem; font-weight: bold; color: #fff;" class="stat-number" data-target="19">0</div>
+                        <div style="color: var(--neon-green); font-size: 0.8rem;">LEVEL (AGE)</div>
+                    </div>
+                    <div style="margin: 20px 0;">
+                        <div style="font-size: 3rem; font-weight: bold; color: #fff;" class="stat-number" data-target="100">0</div>
+                        <div style="color: var(--neon-pink); font-size: 0.8rem;">MOTIVATION (%)</div>
+                    </div>
+                    <div style="margin: 20px 0;">
+                        <div style="font-size: 3rem; font-weight: bold; color: #fff;" class="stat-number" data-target="8000">0</div>
+                        <div style="color: var(--neon-yellow); font-size: 0.8rem;">LIGNES DE CODE</div>
+                    </div>
+                </div>
             </div>
-        </section>
+        </div>
+
     </main>
 
     <footer>
-        <p>&copy; 2026 M. SADOUNI. SYSTÈME SÉCURISÉ. TOUS DROITS RÉSERVÉS.</p>
+        <p>SYSTEM_VERSION_3.0 // CODED WITH <span style="color:var(--neon-pink)">♥</span> & CAFFEINE</p>
     </footer>
 
     <script src="script.js"></script>
