@@ -3,75 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mes Compétences - Mohamed Sadouni</title>
+    <title>M.SADOUNI // ARSENAL</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="scanlines"></div>
+    <div class="noise"></div>
+    <div id="cursor"></div>
+    <canvas id="bg-canvas"></canvas>
 
     <header>
         <div class="navbar">
-            <h1>M. SADOUNI // SKILLS</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html" class="nav-link">ACCUEIL</a></li>
-                    <li><a href="competences.html" class="nav-link active">COMPÉTENCES</a></li>
-                    <li><a href="projets.html" class="nav-link">PROJETS</a></li>
-                </ul>
-            </nav>
+            <div class="logo">M.SADOUNI_</div>
+            <ul class="nav-links">
+                <li><a href="index.html">/ACCUEIL</a></li>
+                <li><a href="parcours.html">/PARCOURS</a></li>
+                <li><a href="competences.html" class="active">/SKILLS</a></li>
+                <li><a href="projets.html">/PROJETS</a></li>
+                <li><a href="labo.html" style="color:var(--neon-pink)">/LABO</a></li>
+                <li><a href="contact.html">/CONTACT</a></li>
+            </ul>
         </div>
     </header>
 
     <main>
-        <section>
-            <h2 class="cyber-title">MODULES DE COMPÉTENCES</h2>
-            <p>Aperçu des capacités techniques et soft-skills acquises.</p>
+        <div class="glitch-wrapper">
+            <h1 class="hacker-text" data-value="ARSENAL TECHNIQUE">ARSENAL TECHNIQUE</h1>
+        </div>
+        <p>Niveau de maîtrise des langages et environnements. Données mises à jour en temps réel.</p>
+
+        <div class="grid-container">
             
-            <div class="skills-grid">
+            <div class="cyber-card">
+                <div class="card-tag">FRONTEND</div>
+                <h3 style="color:var(--neon-cyan)">DÉVELOPPEMENT WEB</h3>
                 
-                <div class="skill-card">
-                    <h3>PROGRAMMATION & WEB</h3>
-                    <ul>
-                        <li>Languages de base : C, C++</li>
-                        <li>Web Front-end : HTML5, CSS3, JavaScript (ES6+)</li>
-                        <li>Web Back-end : Python, Java</li>
-                    </ul>
+                <div class="skill-bar-container">
+                    <div class="skill-info"><span>HTML5 / CSS3</span><span>95%</span></div>
+                    <div class="bar-bg"><div class="bar-fill" data-width="95%"></div></div>
+                </div>
+                
+                <div class="skill-bar-container">
+                    <div class="skill-info"><span>JavaScript (ES6+)</span><span>85%</span></div>
+                    <div class="bar-bg"><div class="bar-fill" data-width="85%"></div></div>
                 </div>
 
-                <div class="skill-card">
-                    <h3>BASES DE DONNÉES</h3>
-                    <ul>
-                        <li>SQL Relationnel (MySQL, PostgreSQL)</li>
-                        <li>Concepts NoSQL</li>
-                        <li>Modélisation & Normalisation des données</li>
-                        <li>Analyse de données (Excel, stats)</li>
-                    </ul>
-                </div>
-
-                <div class="skill-card">
-                    <h3>SYSTÈMES & OUTILS</h3>
-                    <ul>
-                        <li>OS : Linux, Windows, macOS</li>
-                        <li>Systèmes embarqués</li>
-                        <li>Maîtrise suite Microsoft Office / Google Workspace</li>
-                    </ul>
-                </div>
-
-                 <div class="skill-card">
-                    <h3>QUALITÉS PERSONNELLES</h3>
-                    <ul>
-                        <li>Autonomie & Initiative</li>
-                        <li>Rigueur & Précision technique</li>
-                        <li>Esprit d’équipe & Écoute active</li>
-                        <li>Adaptabilité en environnement évolutif</li>
-                    </ul>
+                <div class="skill-bar-container">
+                    <div class="skill-info"><span>Frameworks (React/Vue)</span><span>70%</span></div>
+                    <div class="bar-bg"><div class="bar-fill" data-width="70%"></div></div>
                 </div>
             </div>
-        </section>
-    </main>
 
-    <footer>
-        <p>&copy; 2026 M. SADOUNI. DATABASE LOADED.</p>
-    </footer>
+            <div class="cyber-card" style="border-color: var(--neon-pink);">
+                <div class="card-tag" style="background: var(--neon-pink)">BACKEND</div>
+                <h3 style="color:var(--neon-pink)">APPLICATION & SYSTEM</h3>
+                
+                <div class="skill-bar-container">
+                    <div class="skill-info" style="color:var(--neon-pink)"><span>Java (Swing, POO)</span><span>90%</span></div>
+                    <div class="bar-bg"><div class="bar-fill" data-width="90%" style="background:var(--neon-pink)"></div></div>
+                </div>
+
+                <div class="skill-bar-container">
+                    <div class="skill-info" style="color:var(--neon-pink)"><span>Python (Scripting)</span><span>80%</span></div>
+                    <div class="bar-bg"><div class="bar-fill" data-width="80%" style="background:var(--neon-pink)"></div></div>
+                </div>
+
+                <div class="skill-bar-container">
+                    <div class="skill-info" style="color:var(--neon-pink)"><span>C / C++</span><span>75%</span></div>
+                    <div class="bar-bg"><div class="bar-fill" data-width="75%" style="background:var(--neon-pink)"></div></div>
+                </div>
+            </div>
+
+            <div class="cyber-card" style="border-color: var(--neon-green);">
+                <div class="card-tag" style="background: var(--neon-green)">DATA</div>
+                <h3 style="color:var(--neon-green)">BASE DE DONNÉES</h3>
+                <ul style="list-style:none; line-height:2; margin-top: 15px;">
+                    <li><span style="color:var(--neon-green)">[OK]</span> SQL (MySQL, PostgreSQL)</li>
+                    <li><span style="color:var(--neon-green)">[OK]</span> Modélisation UML / Merise</li>
+                    <li><span style="color:var(--neon-green)">[OK]</span> Optimisation de requêtes</li>
+                </ul>
+            </div>
+
+             <div class="cyber-card" style="border-color: #fff;">
+                <div class="card-tag" style="background: #fff; color: #000;">HUMAN</div>
+                <h3 style="color: #fff">SOFT SKILLS</h3>
+                <div style="display:flex; flex-wrap: wrap; gap: 10px; margin-top: 15px;">
+                    <span style="border:1px solid #fff; padding:5px 10px; font-size: 0.8rem;">RIGUEUR</span>
+                    <span style="border:1px solid #fff; padding:5px 10px; font-size: 0.8rem;">CURIOSITÉ</span>
+                    <span style="border:1px solid #fff; padding:5px 10px; font-size: 0.8rem;">TRAVAIL D'ÉQUIPE</span>
+                    <span style="border:1px solid #fff; padding:5px 10px; font-size: 0.8rem;">AUTONOMIE</span>
+                    <span style="border:1px solid #fff; padding:5px 10px; font-size: 0.8rem;">CLEAN CODE</span>
+                </div>
+            </div>
+
+        </div>
+    </main>
 
     <script src="script.js"></script>
 </body>
