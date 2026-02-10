@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M.SADOUNI // CONTACT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="scanlines"></div>
+    <div class="noise"></div>
+    <div id="cursor"></div>
+    <canvas id="bg-canvas"></canvas>
+
+    <header>
+        <div class="navbar">
+            <div class="logo">M.SADOUNI_</div>
+            <ul class="nav-links">
+                <li><a href="index.html">/ACCUEIL</a></li>
+                <li><a href="parcours.html">/PARCOURS</a></li>
+                <li><a href="competences.html">/SKILLS</a></li>
+                <li><a href="projets.html">/PROJETS</a></li>
+                <li><a href="labo.html" style="color:var(--neon-pink)">/LABO</a></li>
+                <li><a href="contact.html" class="active">/CONTACT</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <div class="glitch-wrapper">
+            <h1 class="hacker-text" data-value="TERMINAL DE CONTACT">TERMINAL DE CONTACT</h1>
+        </div>
+        <p>Établissement d'une connexion sécurisée vers le serveur de messagerie.</p>
+
+        <div class="terminal-window" style="margin-top: 3rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+            <p style="color:#555; margin-bottom: 20px;"> Connecting to secure server 192.168.1.XX... <span style="color:var(--neon-green)">SUCCESS</span></p>
+            
+            <form action="mailto:mohamed.sadouni@universite-paris-saclay.fr" method="post" enctype="text/plain">
+                
+                <div style="margin-bottom: 15px; border-bottom: 1px solid #222; padding-bottom: 5px; display: flex;">
+                    <span style="color: var(--neon-green); margin-right: 15px; white-space: nowrap;">root@guest:~#</span>
+                    <span style="color: var(--neon-cyan); margin-right: 10px;">input_name</span>
+                    <input type="text" name="name" placeholder="Votre Nom / Entreprise" required style="background: transparent; border: none; color: #fff; width: 100%; font-family: monospace; outline: none;">
+                </div>
+
+                <div style="margin-bottom: 15px; border-bottom: 1px solid #222; padding-bottom: 5px; display: flex;">
+                    <span style="color: var(--neon-green); margin-right: 15px; white-space: nowrap;">root@guest:~#</span>
+                    <span style="color: var(--neon-cyan); margin-right: 10px;">input_subject</span>
+                    <input type="text" name="subject" placeholder="Objet (ex: Proposition de stage)" required style="background: transparent; border: none; color: #fff; width: 100%; font-family: monospace; outline: none;">
+                </div>
+
+                <div style="margin-bottom: 15px; border-bottom: 1px solid #222; padding-bottom: 5px; display: flex;">
+                    <span style="color: var(--neon-green); margin-right: 15px; white-space: nowrap;">root@guest:~#</span>
+                    <span style="color: var(--neon-cyan); margin-right: 10px;">write_msg</span>
+                    <textarea name="message" rows="4" placeholder="Tapez votre message ici..." required style="background: transparent; border: none; color: #fff; width: 100%; font-family: monospace; outline: none; resize: none;"></textarea>
+                </div>
+
+                <div style="margin-top: 20px;">
+                    <span style="color: var(--neon-green); margin-right: 15px;">root@guest:~#</span>
+                    <button type="submit" class="btn-glitch" style="border:none; margin:0; font-size:0.9rem; cursor:pointer; padding: 10px 20px;">> EXECUTE_SEND.SH</button>
+                </div>
+
+            </form>
+        </div>
+
+        <div style="margin-top: 4rem; text-align: center; border-top: 1px solid #222; padding-top: 30px;">
+            <h3 style="color: var(--neon-cyan); margin-bottom: 20px;">COORDONNÉES CRYPTÉES</h3>
+            <p style="font-size: 1.1rem; color: #fff; margin-bottom: 5px;">17 rue des Pierrelais, 92260 Fontenay-Aux-Roses</p>
+            <p style="font-size: 1.1rem; color: #fff; margin-bottom: 5px;">07 66 71 73 10</p>
+            <p style="font-size: 1.1rem; color: #fff;">mohamed.sadouni@universite-paris-saclay.fr</p>
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

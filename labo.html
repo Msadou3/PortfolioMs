@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M.SADOUNI // LABO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="scanlines"></div>
+    <div class="noise"></div>
+    <div id="cursor"></div>
+    <canvas id="bg-canvas"></canvas>
+
+    <header>
+        <div class="navbar">
+            <div class="logo">M.SADOUNI_</div>
+            <ul class="nav-links">
+                <li><a href="index.html">/ACCUEIL</a></li>
+                <li><a href="parcours.html">/PARCOURS</a></li>
+                <li><a href="competences.html">/SKILLS</a></li>
+                <li><a href="projets.html">/PROJETS</a></li>
+                <li><a href="labo.html" class="active" style="color:var(--neon-pink)">/LABO</a></li>
+                <li><a href="contact.html">/CONTACT</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <h1 class="hacker-text" data-value="ZONE EXPÉRIMENTALE" style="color:var(--neon-pink)">ZONE EXPÉRIMENTALE</h1>
+        <p>Projets personnels, scripts bash et veille technologique. Attention : Zone instable.</p>
+
+        <div class="grid-container">
+
+            <div class="cyber-card" style="border-color: var(--neon-pink);">
+                <div class="card-tag">BASH</div>
+                <h3>> AUTOMATISATION BACKUP</h3>
+                <p>Script shell pour sauvegarder mes cours sur serveur distant.</p>
+                <div style="background:#000; padding:15px; margin-top:15px; font-family:monospace; color:#aaa; font-size:0.8rem; border-left: 2px solid var(--neon-pink);">
+                    <span style="color:var(--neon-pink)">#!/bin/bash</span><br>
+                    echo "Starting backup..."<br>
+                    rsync -avz /home/mohamed/cours user@192.168.1.50:/backup<br>
+                    if [ $? -eq 0 ]; then echo "Success"; fi
+                </div>
+            </div>
+
+            <div class="cyber-card" style="border-color: var(--neon-green);">
+                <div class="card-tag" style="background:var(--neon-green)">NETWORK</div>
+                <h3>> HOME LAB (RASPBERRY PI)</h3>
+                <ul style="list-style:none; line-height:2; margin-top:10px;">
+                    <li><span style="color:var(--neon-green)">[ONLINE]</span> Serveur Web (Apache)</li>
+                    <li><span style="color:var(--neon-green)">[ONLINE]</span> Pi-Hole (AdBlock DNS)</li>
+                    <li><span style="color:var(--neon-pink)">[OFFLINE]</span> Serveur Minecraft</li>
+                </ul>
+            </div>
+
+            <div class="cyber-card" style="border-color: var(--neon-yellow);">
+                <div class="card-tag" style="background:var(--neon-yellow)">CTF</div>
+                <h3>> CHALLENGES SÉCURITÉ</h3>
+                <p>Entraînement sur Root-Me.org.</p>
+                <div style="margin-top:15px;">
+                    <div class="skill-info"><span>Web Client</span><span>50%</span></div>
+                    <div class="bar-bg"><div class="bar-fill" style="background:var(--neon-yellow); width:50%"></div></div>
+                </div>
+                <div style="margin-top:10px;">
+                    <div class="skill-info"><span>Stéganographie</span><span>30%</span></div>
+                    <div class="bar-bg"><div class="bar-fill" style="background:var(--neon-yellow); width:30%"></div></div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
