@@ -3,58 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mes Projets - Mohamed Sadouni</title>
+    <title>M.SADOUNI // PROJETS</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="scanlines"></div>
+    <div class="noise"></div>
+    <div id="cursor"></div>
+    <canvas id="bg-canvas"></canvas>
 
     <header>
         <div class="navbar">
-            <h1>M. SADOUNI // PROJETS</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html" class="nav-link">ACCUEIL</a></li>
-                    <li><a href="competences.html" class="nav-link">COMPÉTENCES</a></li>
-                    <li><a href="projets.html" class="nav-link active">PROJETS</a></li>
-                </ul>
-            </nav>
+            <div class="logo">M.SADOUNI_</div>
+            <ul class="nav-links">
+                <li><a href="index.html">/ACCUEIL</a></li>
+                <li><a href="parcours.html">/PARCOURS</a></li>
+                <li><a href="competences.html">/SKILLS</a></li>
+                <li><a href="projets.html" class="active">/PROJETS</a></li>
+                <li><a href="labo.html" style="color:var(--neon-pink)">/LABO</a></li>
+                <li><a href="contact.html">/CONTACT</a></li>
+            </ul>
         </div>
     </header>
 
     <main>
-        <section id="projets-header">
-            <h2 class="cyber-title">MES PROJETS</h2>
-            <p>Voici quelques projets que j'ai réalisés pendant mes études ou dans le cadre de mes passions. Passez votre curseur sur les cartes pour voir l'effet 3D.</p>
+        <div class="glitch-wrapper">
+            <h1 class="hacker-text" data-value="ARCHIVES PROJETS">ARCHIVES PROJETS</h1>
+        </div>
+        <p>Sélection de projets académiques et personnels. Accès direct aux sources et prototypes.</p>
 
-            <div class="project-list">
-                
-                <div class="project-item">
-                    <h3>Projet 1: Développement d'un site web</h3>
-                    <p>Une application web créée pour la gestion des tâches, utilisant HTML, CSS, et JavaScript. Ce projet m'a permis de me familiariser avec le développement front-end.</p>
-                    <a href="file:///Z:/projet%20swac/formation.html" target="_blank" class="btn">VOIR LE PROJET ></a>
+        <div class="grid-container">
+            
+            <div class="cyber-card">
+                <div class="card-tag">WEB APP</div>
+                <h3 style="color: var(--neon-cyan)">TASK_MANAGER V1</h3>
+                <p style="margin-bottom: 1rem;">
+                    Développement d'une application web pour la gestion des tâches. Interface réactive et manipulation du DOM en temps réel.
+                </p>
+                <div style="margin-bottom: 1.5rem;">
+                    <span style="color: var(--neon-cyan); font-size: 0.8rem; border: 1px solid var(--neon-cyan); padding: 2px 5px; margin-right: 5px;">HTML5</span>
+                    <span style="color: var(--neon-cyan); font-size: 0.8rem; border: 1px solid var(--neon-cyan); padding: 2px 5px; margin-right: 5px;">CSS3</span>
+                    <span style="color: var(--neon-cyan); font-size: 0.8rem; border: 1px solid var(--neon-cyan); padding: 2px 5px;">JS VANILLA</span>
                 </div>
-
-                <div class="project-item">
-                    <h3>Projet 2: Développement d'une application</h3>
-                    <p>Développement d'une application Java pour administrer les maisons, les étudiants et les services de la CIUP, en suivant une approche orientée objet.</p>
-                    <p>Conception UML (diagramme de classes) et implémentation en Java avec Visual Paradigm.</p>
-                    <p>Création d’une IHM (Swing) et tests utilisateurs (méthode "talk-aloud").</p>
-                    <a href="https://www.figma.com/proto/uXbwXFb2j51bwKinpDTZNk/Untitled?node-id=35-173&t=rwu0417TOH9ywIIJ-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=30%3A162" target="_blank" class="btn">VOIR LE PROJET ></a>
-                </div>
-
-                <div class="project-item">
-                    <h3>Projet 3: Base de Données pour une Association Universitaire</h3>
-                    <p>Une association universitaire (BDE) a besoin d’une base de données pour gérer ses membres, événements, cotisations et ressources.</p>
-                    <p>L’objectif est de centraliser les données, automatiser les tâches administratives et faciliter la communication.</p>
-                </div>
-
+                <a href="file:///Z:/projet%20swac/formation.html" target="_blank" class="btn-glitch">LANCER LE PROJET</a>
             </div>
-        </section>
-    </main>
 
-    <footer>
-        <p>&copy; 2026 M. SADOUNI. TOUS DROITS RÉSERVÉS.</p>
-    </footer>
+            <div class="cyber-card" style="border-color: var(--neon-pink);">
+                <div class="card-tag" style="background: var(--neon-pink)">JAVA APP</div>
+                <h3 style="color: var(--neon-pink)">CIUP_ADMIN_SYSTEM</h3>
+                <p style="margin-bottom: 1rem;">
+                    Application lourde pour l'administration de la Cité Internationale Universitaire. Gestion des résidents et facturation.
+                    <br>Conception UML & Tests utilisateurs.
+                </p>
+                <div style="margin-bottom: 1.5rem;">
+                    <span style="color: var(--neon-pink); font-size: 0.8rem; border: 1px solid var(--neon-pink); padding: 2px 5px; margin-right: 5px;">JAVA</span>
+                    <span style="color: var(--neon-pink); font-size: 0.8rem; border: 1px solid var(--neon-pink); padding: 2px 5px; margin-right: 5px;">SWING</span>
+                    <span style="color: var(--neon-pink); font-size: 0.8rem; border: 1px solid var(--neon-pink); padding: 2px 5px;">UML</span>
+                </div>
+                <a href="https://www.figma.com/proto/uXbwXFb2j51bwKinpDTZNk/Untitled?node-id=35-173&t=rwu0417TOH9ywIIJ-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=30%3A162" target="_blank" class="btn-glitch" style="border-color: var(--neon-pink); color: var(--neon-pink);">VOIR LE PROTOTYPE</a>
+            </div>
+
+            <div class="cyber-card" style="border-color: var(--neon-green);">
+                <div class="card-tag" style="background: var(--neon-green)">DATA</div>
+                <h3 style="color: var(--neon-green)">BDE_DATA_CORE</h3>
+                <p style="margin-bottom: 1rem;">
+                    Conception et implémentation d'une base de données relationnelle pour une association étudiante.
+                    <br>Centralisation des membres et automatisation des requêtes.
+                </p>
+                <div style="margin-bottom: 1.5rem;">
+                    <span style="color: var(--neon-green); font-size: 0.8rem; border: 1px solid var(--neon-green); padding: 2px 5px; margin-right: 5px;">SQL</span>
+                    <span style="color: var(--neon-green); font-size: 0.8rem; border: 1px solid var(--neon-green); padding: 2px 5px;">MERISE</span>
+                </div>
+                <button class="btn-glitch" style="border-color: #555; color: #555; cursor: not-allowed;">ACCÈS RESTREINT</button>
+            </div>
+
+        </div>
+    </main>
 
     <script src="script.js"></script>
 </body>
